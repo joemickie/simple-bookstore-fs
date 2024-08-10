@@ -143,7 +143,7 @@ Before you begin, ensure you have the following installed:
 
 ## API Documentation
 
-The API documentation is available via [this link](https://documenter.getpostman.com/view/your-documentation-link).
+The API documentation is available via [this link](https://www.postman.com/descent-module-engineer-17842046/workspace/tweetai-api/collection/30896875-d14fdc0e-915b-4a34-8ecf-ee101e962e30?action=share&creator=30896875).
 
 You can test the API endpoints using Postman or any other API testing tool.
 
