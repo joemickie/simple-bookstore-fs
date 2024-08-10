@@ -1,12 +1,8 @@
-const postService = require('../services/postService');
+const Post = require('../models/Post');
 
 async function getPosts(req, res) {
-  try {
-    const posts = await postService.getPostsByAutobot(req.params.autobotId);
-    res.json(posts);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch posts' });
-  }
+  const posts = await Post.findAll({ where: { AutobotId: req.params.autobotId }, limit: 10 });
+  res.json(posts);
 }
 
 module.exports = { getPosts };

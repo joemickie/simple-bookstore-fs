@@ -1,12 +1,8 @@
-const commentService = require('../services/commentService');
+const Comment = require('../models/Comment');
 
 async function getComments(req, res) {
-  try {
-    const comments = await commentService.getCommentsByPost(req.params.postId);
-    res.json(comments);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch comments' });
-  }
+  const comments = await Comment.findAll({ where: { PostId: req.params.postId }, limit: 10 });
+  res.json(comments);
 }
 
 module.exports = { getComments };
